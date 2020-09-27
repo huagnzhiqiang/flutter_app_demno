@@ -95,20 +95,24 @@ class OfficialAccount extends StatelessWidget {
                     width: 162.w,
                     height: 32.h,
                   )),
-              Padding(
-                padding: EdgeInsets.only(left: 12.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "关注iTOP智能名片公众号",
-                      style: TextStyle(fontSize: 28.sp, color: Color(0xff333333), fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      "访客通知，升级更新早知道！",
-                      style: TextStyle(fontSize: 24.sp, color: Color(0xff999999), fontWeight: FontWeight.w500),
-                    ),
-                  ],
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 12.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "关注iTOP智能名片公众号",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 28.sp, color: Color(0xff333333), fontWeight: FontWeight.w500),
+                      ),
+                      Text(
+                        "访客通知，升级更新早知道！",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 24.sp, color: Color(0xff999999), fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -260,47 +264,47 @@ class BusinessCardList extends StatelessWidget {
   //每一个
   Widget _businessCardList(String title, String subTitle, String openTip) {
     return Container(
-      color: Color(0xfffafafa),
-      alignment: Alignment.centerLeft,
       width: 300.w,
-      child: new Card(
-        color: Colors.white,
-        elevation: 0.0,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ListTile(
-              title: new Text(title),
-              subtitle: new Text(
-                subTitle,
-                style: TextStyle(
-                  color: Color(0xff333333),
-                  fontSize: 24.sp,
-                ),
-              ),
+      margin: EdgeInsets.only(left: 13.0.w),
+      padding: EdgeInsets.only(left: 24.0.w,top: 20.h),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          new Text(
+            title,
+            style: TextStyle(color: Color(0xff333333), fontSize: 30.sp, fontWeight: FontWeight.bold),
+          ),
+          new Text(
+            subTitle,
+            style: TextStyle(
+              color: Color(0xff333333),
+              fontSize: 24.sp,
             ),
-            Container(
-              padding: EdgeInsets.only(left: 24.w, bottom: 20.w),
-              // child: RawChip(
-              //   padding: EdgeInsets.only(top: 5,bottom: 5),
-              //   label: Text(
-              //     openTip,
-              //     style: TextStyle(color: Colors.white, fontSize: 12),
-              //   ),
-              //   backgroundColor: Colors.blue,
-              // ),
-              child: FlyRecFlatButton(
-                openTip,
-                radius: 50,
-                width: 100.w,
-                onTap: () {
-                  print(openTip);
-                },
-              ),
+          ),
+          Container(
+            padding: EdgeInsets.only( bottom: 20.w, top: 10.h),
+            // child: RawChip(
+            //   padding: EdgeInsets.only(top: 5,bottom: 5),
+            //   label: Text(
+            //     openTip,
+            //     style: TextStyle(color: Colors.white, fontSize: 12),
+            //   ),
+            //   backgroundColor: Colors.blue,
+            // ),
+            child: FlyRecFlatButton(
+              openTip,
+              radius: 50,
+              width: 100.w,
+              top: 0,
+              bottom: 0,
+              onTap: () {
+                print(openTip);
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -456,7 +460,7 @@ class BusinessCard extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(right: 24.0.w, top: 40.h),
                         child: new RaisedButton(
-                           color: Color(0xffFF9600),
+                          color: Color(0xffFF9600),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
                           },
