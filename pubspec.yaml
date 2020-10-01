@@ -89,6 +89,8 @@ flutter:
     - assets/images/icon_login_itop.png
     - assets/images/icon_wechat_login.png
     - assets/images/icon_pwd_login.png
+    - assets/images/see.png
+    - assets/images/nosee.png
     -
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demno/ui/pages/login/pws_login_page.dart';
 import 'package:flutter_app_demno/utlis/common_colors.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,24 +26,30 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Spacer(),
-          Column(
-            children: [
-              Image.asset(
-                CommonUtil.getImgPath("icon_pwd_login", format: "png"),
-                width: 58.w,
-                height: 58.h,
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 18.h, bottom: 50.h),
-                child: Text(
-                  "密码登录",
-                  style: TextStyle(
-                    fontSize: 24.sp,
-                    color: CommonColors.COLOR_999999,
-                  ),
+          InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => PwsLoginPage()));
+
+            },
+            child: Column(
+              children: [
+                Image.asset(
+                  CommonUtil.getImgPath("icon_pwd_login", format: "png"),
+                  width: 58.w,
+                  height: 58.h,
                 ),
-              )
-            ],
+                Padding(
+                  padding: EdgeInsets.only(top: 18.h, bottom: 50.h),
+                  child: Text(
+                    "密码登录",
+                    style: TextStyle(
+                      fontSize: 24.sp,
+                      color: CommonColors.COLOR_999999,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
           Spacer(),
           Column(

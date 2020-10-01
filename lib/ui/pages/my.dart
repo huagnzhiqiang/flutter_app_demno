@@ -4,7 +4,7 @@ import 'package:flutter_app_demno/utlis/common_colors.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'fly_rec_flat_button.dart';
-import 'login_page.dart';
+import 'login/login_page.dart';
 /*
  * @author 小强
  *
@@ -19,9 +19,8 @@ class MyPage extends StatefulWidget {
   _MyPageState createState() => _MyPageState();
 }
 
-/**
- * 首页视图
- */
+
+//首页视图
 class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
