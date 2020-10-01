@@ -19,6 +19,9 @@ class MyPage extends StatefulWidget {
   _MyPageState createState() => _MyPageState();
 }
 
+/**
+ * 首页视图
+ */
 class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
