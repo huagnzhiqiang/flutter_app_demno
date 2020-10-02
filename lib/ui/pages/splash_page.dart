@@ -1,7 +1,5 @@
-import 'package:base_library/base_library.dart';
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demno/main.dart';
 import 'package:flutter_app_demno/ui/pages/mian/xq_main_page.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
 

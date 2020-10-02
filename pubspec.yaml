@@ -41,10 +41,17 @@ dependencies:
 
   flutter_cupertino_data_picker: ^0.8.6
 
-  base_library:
-    git:
-      url: git://github.com/Sky24n/FlutterRepos.git
-      path: base_library
+  fluttertoast: ^7.1.1
+
+  dio: 3.0.10
+
+  shared_preferences: ^0.5.12
+
+
+#  base_library:
+#    git:
+#      url: git://github.com/Sky24n/FlutterRepos.git
+#      path: base_library
 
 dev_dependencies:
   flutter_test:

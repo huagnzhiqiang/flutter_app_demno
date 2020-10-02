@@ -1,14 +1,20 @@
-import 'package:base_library/base_library.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demno/ui/pages/business_card_page.dart';
-import 'package:flutter_app_demno/ui/pages/icon_tab.dart';
-import 'package:flutter_app_demno/ui/pages/my.dart';
 import 'package:flutter_app_demno/ui/pages/splash_page.dart';
+import 'package:flutter_app_demno/utlis/sp_util.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'ui/pages/mian/xq_main_page.dart';
 
 void main() {
+  // init();
   return runApp(MyApp());
+}
+
+init() async {
+  // 获取实例
+  var prefs = await SharedPreferences.getInstance();
+  // 设置存储数据
+  await prefs.clear();
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        BaseConstant.routeMain: (ctx) => XQMainPage(),
+        // BaseConstant.routeMain: (ctx) => XQMainPage(),
       },
       theme: ThemeData.light().copyWith(
           primaryColor: Colors.blue,

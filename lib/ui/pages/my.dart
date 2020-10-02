@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demno/app/sp_key.dart';
 import 'package:flutter_app_demno/ui/pages/new_user_progress_widget.dart';
 import 'package:flutter_app_demno/utlis/common_colors.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
+import 'package:flutter_app_demno/utlis/sp_util.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'fly_rec_flat_button.dart';
 import 'login/login_page.dart';
 /*
@@ -18,7 +21,6 @@ class MyPage extends StatefulWidget {
   @override
   _MyPageState createState() => _MyPageState();
 }
-
 
 //首页视图
 class _MyPageState extends State<MyPage> {
@@ -268,7 +270,7 @@ class BusinessCardList extends StatelessWidget {
     return Container(
       width: 300.w,
       margin: EdgeInsets.only(left: 13.0.w),
-      padding: EdgeInsets.only(left: 24.0.w,top: 20.h),
+      padding: EdgeInsets.only(left: 24.0.w, top: 20.h),
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -286,7 +288,7 @@ class BusinessCardList extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.only( bottom: 20.w, top: 10.h),
+            padding: EdgeInsets.only(bottom: 20.w, top: 10.h),
             // child: RawChip(
             //   padding: EdgeInsets.only(top: 5,bottom: 5),
             //   label: Text(
@@ -463,8 +465,20 @@ class BusinessCard extends StatelessWidget {
                         padding: EdgeInsets.only(right: 24.0.w, top: 40.h),
                         child: new RaisedButton(
                           color: Color(0xffFF9600),
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                          onPressed: () async {
+                            // 获取实例
+                            var prefs = await SharedPreferences.getInstance();
+                            // 设置存储数据
+                            var bool = prefs.getBool(SpKey.IS_LOGIN) ?? false;
+
+                            print(bool);
+
+                            if (bool) {
+                              CommonUtil.showToast("登录");
+                            } else {
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                            }
                           },
                           child: Text(
                             "开通VIP",
