@@ -100,6 +100,13 @@ flutter:
     - assets/images/icon_pwd_login.png
     - assets/images/see.png
     - assets/images/nosee.png
+    - assets/images/business_card_icon_default_people.webp
+    - assets/images/business_card_icon_exchange.webp
+    - assets/images/business_card_icon_facing_each_other.webp
+    - assets/images/business_card_icon_message_1.webp
+    - assets/images/business_card_icon_qr_code.webp
+    - assets/images/business_card_icon_send_business_card_1.webp
+    - assets/images/business_card_icon_share_2.webp
     -
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
