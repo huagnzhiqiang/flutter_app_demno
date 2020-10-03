@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
 
-import '../business_card_page.dart';
+import '../businessCard/business_card_page.dart';
 import '../my.dart';
 import 'bottom_navigation_bar_list.dart';
 
