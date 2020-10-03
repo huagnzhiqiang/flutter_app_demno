@@ -473,7 +473,7 @@ class BusinessCard extends StatelessWidget {
 
                             print(bool);
 
-                            if (bool) {
+                            if (!bool) {
                               CommonUtil.showToast("登录");
                             } else {
                               Navigator.push(
