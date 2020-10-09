@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demno/utlis/common_ulit.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
+import 'business_card_head_page.dart';
 
 /*
  * @author 小强
@@ -11,38 +14,29 @@ import 'package:flutter_swiper/flutter_swiper.dart';
  */
 
 class BusinessCardPage extends StatefulWidget {
-   @override
-   _BusinessCardPageState createState() => _BusinessCardPageState();
+  @override
+  _BusinessCardPageState createState() => _BusinessCardPageState();
 }
 
 class _BusinessCardPageState extends State<BusinessCardPage> {
-   @override
-   Widget build(BuildContext context) {
-      return new Container(
-         child: Column(
-            children: <Widget>[_SwiperIDY()],
-         ),
-      );
-   }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: UpPageViewPageState(),
+    );
+  }
 }
 
-class _SwiperIDY extends StatelessWidget {
-   @override
-   Widget build(BuildContext context) {
-      return Container(
-         height: 300,
-         child: Swiper(
-            itemCount: 3,
-            loop: false,
-            control: SwiperPagination(margin:EdgeInsets.only(bottom: 20),builder: SwiperPagination.dots),
-            transformer: ScaleAndFadeTransformer(),
-            itemBuilder: (BuildContext context, int index) {
-               return new Image.network(
-                  "https://f11.baidu.com/it/u1=163707931&u2=953875484&fm=76",
-                  fit: BoxFit.fill,
-               );
-            },
-         ),
-      );
-   }
+class UpPageViewPageState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: PageView(
+      scrollDirection: Axis.vertical,
+      children: [
+        BusinessCardHeadPage(),
+        Image.asset(CommonUtil.getImgPath("main_icon_guide_2")),
+      ],
+    ));
+  }
 }

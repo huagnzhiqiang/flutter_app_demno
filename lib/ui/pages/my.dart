@@ -3,7 +3,6 @@ import 'package:flutter_app_demno/app/sp_key.dart';
 import 'package:flutter_app_demno/ui/pages/new_user_progress_widget.dart';
 import 'package:flutter_app_demno/utlis/common_colors.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
-import 'package:flutter_app_demno/utlis/sp_util.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fly_rec_flat_button.dart';

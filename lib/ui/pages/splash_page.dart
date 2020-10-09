@@ -66,7 +66,6 @@ class SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     CommonUtil.setScreenUtil(context);
-
     return Material(
       child: new Stack(
         children: <Widget>[

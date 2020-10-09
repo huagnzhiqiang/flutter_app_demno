@@ -3,6 +3,7 @@ import 'package:flutter_app_demno/ui/pages/splash_page.dart';
 import 'package:flutter_app_demno/utlis/sp_util.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'ui/pages/businessCard/DataTabelDemo.dart';
 import 'ui/pages/mian/xq_main_page.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.blue,
           indicatorColor: Colors.white,
           highlightColor: Colors.transparent),
-      home: SplashPage(),
+      home: DataTableDemo(),
     );
   }
 }

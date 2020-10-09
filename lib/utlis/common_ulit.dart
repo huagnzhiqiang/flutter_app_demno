@@ -18,8 +18,8 @@ class CommonUtil {
     */
   static String getImgPath(String pathName, {String format: "webp"}) => 'assets/images/$pathName.$format';
 
-  static void setScreenUtil(BuildContext context, {num width = 750, num height = 1334, bool allowFontScaling = true}) {
-    ScreenUtil.init(context, width: width, height: height, allowFontScaling: allowFontScaling);
+  static void setScreenUtil(BuildContext context, {double width = 750, double height = 1334, bool allowFontScaling = true}) {
+    ScreenUtil.init(context,designSize: Size(width, height), allowFontScaling: true);
   }
 
   /*
