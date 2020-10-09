@@ -4,7 +4,6 @@ import 'package:flutter_app_demno/ui/pages/login/pws_login_page.dart';
 import 'package:flutter_app_demno/utlis/common_colors.dart';
 import 'package:flutter_app_demno/utlis/common_ulit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 /*
  * @author 小强
